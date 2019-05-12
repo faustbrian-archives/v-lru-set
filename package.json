@@ -1,0 +1,87 @@
+{
+	"name": "@veestore/lru-set",
+	"version": "0.1.0",
+	"description": "LRU Set Implementation of Vee Store",
+	"homepage": "https://github.com/veestore/lru-set",
+	"bugs": {
+		"url": "https://github.com/veestore/lru-set/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:veestore/lru-set.git"
+	},
+	"license": "MIT",
+	"author": "Brian Faust <hello@basecode.sh>",
+	"files": [
+		"dist"
+	],
+	"main": "dist/index",
+	"types": "dist/index",
+	"scripts": {
+		"build": "yarn clean && tsc",
+		"build:watch": "yarn build -w",
+		"clean": "rimraf .coverage dist tmp",
+		"format": "yarn lint && yarn prettier",
+		"lint": "tslint -c tslint.json -p tslint.json 'src/**/*.ts' --fix",
+		"prepublishOnly": "yarn format && yarn test && yarn build",
+		"prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\"",
+		"test": "jest",
+		"test:watch": "jest --watchAll"
+	},
+	"jest": {
+		"bail": true,
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/**/*.ts",
+			"!**/node_modules/**"
+		],
+		"coverageDirectory": "<rootDir>/.coverage",
+		"coverageReporters": [
+			"json",
+			"lcov",
+			"text",
+			"clover",
+			"html"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		],
+		"setupFilesAfterEnv": [
+			"jest-extended"
+		],
+		"testEnvironment": "node",
+		"testMatch": [
+			"**/*.test.ts"
+		],
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"verbose": true
+	},
+	"dependencies": {
+		"@veestore/veestore": "^0.1.0",
+		"collections": "^5.1.8"
+	},
+	"devDependencies": {
+		"@faustbrian/tslint": "^0.1.3",
+		"@types/collections": "^5.0.0",
+		"@types/jest": "^24.0.12",
+		"@types/node": "^12.0.0",
+		"@types/prettier": "^1.16.3",
+		"@types/rimraf": "^2.0.2",
+		"@veestore/test-suite": "^0.1.0",
+		"codecov": "^3.4.0",
+		"jest": "^24.8.0",
+		"jest-extended": "^0.11.1",
+		"prettier": "^1.17.0",
+		"rimraf": "^2.6.3",
+		"ts-jest": "^24.0.2",
+		"tslint": "^5.16.0",
+		"typescript": "^3.4.5"
+	}
+}
