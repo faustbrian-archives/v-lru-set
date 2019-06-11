@@ -6,7 +6,7 @@
 [![Node Engine](https://badgen.now.sh/npm/node/@veestore/lru-set)](https://www.npmjs.com/package/@veestore/lru-set)
 [![Build Status](https://badgen.now.sh/circleci/github/veestore/lru-set)](https://circleci.com/gh/veestore/lru-set)
 [![Codecov](https://badgen.now.sh/codecov/c/github/veestore/lru-set)](https://codecov.io/gh/veestore/lru-set)
-[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/)
+[![License: MPL-2.0](https://badgen.now.sh/badge/license/MPL-2.0/green)](https://mozilla.org/MPL/2.0/) [![Greenkeeper badge](https://badges.greenkeeper.io/veestore/lru-set.svg)](https://greenkeeper.io/)
 
 ## Installation
 
